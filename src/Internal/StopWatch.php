@@ -22,14 +22,14 @@ class StopWatch
 
     public static function startNew(): self
     {
-        $started = microtime(true);
+        $started = \microtime(true);
 
         return new self($started);
     }
 
     public function elapsed(): float
     {
-        $timestamp = microtime(true);;
+        $timestamp = \microtime(true);
 
         return $timestamp - $this->started;
     }
